@@ -14,6 +14,7 @@
 		5B4BF85825B749D100FCB555 /* FaceDetection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B4BF85625B749D100FCB555 /* FaceDetection.xcdatamodeld */; };
 		5B4BF85A25B749D400FCB555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4BF85925B749D400FCB555 /* Assets.xcassets */; };
 		5B4BF85D25B749D400FCB555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4BF85B25B749D400FCB555 /* LaunchScreen.storyboard */; };
+		5B8A244525B9873100368425 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8A244425B9873000368425 /* Strings.swift */; };
 		9ACE9E84ADE92D3991AFE626 /* Pods_FaceDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C340A70F0D0C79E6E9A75777 /* Pods_FaceDetection.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		5B4BF85925B749D400FCB555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B4BF85C25B749D400FCB555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B4BF85E25B749D400FCB555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B8A244425B9873000368425 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		C340A70F0D0C79E6E9A75777 /* Pods_FaceDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				5B4BF85B25B749D400FCB555 /* LaunchScreen.storyboard */,
 				5B4BF85E25B749D400FCB555 /* Info.plist */,
 				5B4BF85625B749D100FCB555 /* FaceDetection.xcdatamodeld */,
+				5B8A244425B9873000368425 /* Strings.swift */,
 			);
 			path = FaceDetection;
 			sourceTree = "<group>";
@@ -91,7 +94,6 @@
 				447AB8DB0AA169A1D41CE812 /* Pods-FaceDetection.debug.xcconfig */,
 				01E25DD6CFFD3A862FA76F75 /* Pods-FaceDetection.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -193,6 +195,7 @@
 			files = (
 				5B4BF85825B749D100FCB555 /* FaceDetection.xcdatamodeld in Sources */,
 				5B4BF85225B749D100FCB555 /* ViewController.swift in Sources */,
+				5B8A244525B9873100368425 /* Strings.swift in Sources */,
 				5B4BF84E25B749D100FCB555 /* AppDelegate.swift in Sources */,
 				5B4BF85025B749D100FCB555 /* SceneDelegate.swift in Sources */,
 			);
