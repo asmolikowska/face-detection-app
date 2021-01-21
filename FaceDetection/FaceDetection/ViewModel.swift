@@ -20,5 +20,22 @@ class ViewModel {
         print(facesCount)
         return facesCount
     }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func writeImgInDocuments(image: UIImage, name: String) {
+        let url = self.getDocumentsDirectory().appendingPathComponent(name)
+        do {
+            if let data = image.jpegData(compressionQuality: 1.0) {
+                try data.write(to: url)
+                print("Saved succesfully with path \(url)")
+            }
+        } catch {
+            print(error)
+        }
+    }
 }
 

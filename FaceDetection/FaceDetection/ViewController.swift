@@ -43,6 +43,7 @@ class ViewController: UIViewController {
                 guard let image = UIImage.init(data: imageData) else {
                     fatalError("not valid image data")
                 }
+                self.viewModel.writeImgInDocuments(image: image, name: "image.jpg")
                 
                 DispatchQueue.main.async {
                     self.imageView.image = image
