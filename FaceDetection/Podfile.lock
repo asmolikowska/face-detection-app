@@ -3,31 +3,29 @@ PODS:
     - Differ (~> 1.4)
     - ReactiveKit (~> 3.14)
   - Differ (1.4.5)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - ReactiveKit (3.17.4)
-  - SwiftSpinner (2.2.0)
-  - SwiftyBeaver (1.9.3)
 
 DEPENDENCIES:
   - Bond
+  - NVActivityIndicatorView
   - ReactiveKit
-  - SwiftSpinner
-  - SwiftyBeaver
 
 SPEC REPOS:
   trunk:
     - Bond
     - Differ
+    - NVActivityIndicatorView
     - ReactiveKit
-    - SwiftSpinner
-    - SwiftyBeaver
 
 SPEC CHECKSUMS:
   Bond: 87075c7f20f37ea3e73dc7057fce839787bf46eb
   Differ: 3b6bd78e2b20cc795d9a86f7641d087524e4273e
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ReactiveKit: f9f9e079efa39312c597bf1508ef4810d111ce76
-  SwiftSpinner: f9b59477fe107427f2b5b835497d6636fa167ede
-  SwiftyBeaver: 2e8acd6fc90c6d0a27055867a290794926d57c02
 
-PODFILE CHECKSUM: fb4dfc081f543048ea1cfdc015bf77246e2c4ec5
+PODFILE CHECKSUM: 5d5f91e2f998dab3aa1631055b87dc34a603cc8a
 
 COCOAPODS: 1.10.0

@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreData
-import SwiftyBeaver
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,16 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        setupSwiftyBeaverLogging()
-        SwiftyBeaver.info("App did finish launching")
         return true
     }
     
-    func setupSwiftyBeaverLogging() {
-        let console = ConsoleDestination()
-        SwiftyBeaver.addDestination(console)
-    }
-
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

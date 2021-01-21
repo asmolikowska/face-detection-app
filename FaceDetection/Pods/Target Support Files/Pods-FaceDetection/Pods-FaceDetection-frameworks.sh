@@ -177,16 +177,14 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Bond/Bond.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differ/Differ.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Bond/Bond.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differ/Differ.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

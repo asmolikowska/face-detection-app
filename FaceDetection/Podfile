@@ -4,10 +4,10 @@
 target 'FaceDetection' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-	pod "SwiftSpinner"
+	pod 'NVActivityIndicatorView'
 	pod 'Bond'
 	pod 'ReactiveKit'
-	pod 'SwiftyBeaver'
+
 
   # Pods for FaceDetection
 

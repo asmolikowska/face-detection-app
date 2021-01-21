@@ -16,28 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tQ-h8-qNF">
-                                <rect key="frame" x="80" y="121" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZ3-Gv-ffN">
-                                <rect key="frame" x="150" y="367" width="114" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Download image"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZ3-Gv-ffN">
+                                <rect key="frame" x="135" y="165" width="145" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Yvl-av-4jS"/>
+                                </constraints>
+                                <state key="normal" title="Download image first"/>
                                 <connections>
-                                    <action selector="import:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4pf-Ka-iBw"/>
+                                    <action selector="downloadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4pf-Ka-iBw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click here to perform face detection!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9is-La-FBE">
-                                <rect key="frame" x="28" y="310" width="357" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="aTO-GS-UWq">
+                                <rect key="frame" x="35" y="596" width="345" height="182.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0tQ-h8-qNF">
+                                        <rect key="frame" x="52.5" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here will be result of face detection counting!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9is-La-FBE">
+                                        <rect key="frame" x="0.0" y="162" width="345" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="345" id="uhz-Xo-oBn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9is-La-FBE" secondAttribute="trailing" id="01i-ga-W7E"/>
+                                    <constraint firstItem="9is-La-FBE" firstAttribute="leading" secondItem="aTO-GS-UWq" secondAttribute="leading" id="Y5b-KN-c0p"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aTO-GS-UWq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="2Mz-ew-1Rv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aTO-GS-UWq" secondAttribute="bottom" constant="83.5" id="8ST-aL-dvp"/>
+                            <constraint firstItem="YZ3-Gv-ffN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="CFi-kB-OYe"/>
+                            <constraint firstItem="YZ3-Gv-ffN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="I4P-tL-34m"/>
+                            <constraint firstItem="YZ3-Gv-ffN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hCU-jd-8oO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aTO-GS-UWq" secondAttribute="trailing" constant="34" id="hsD-Pv-8K9"/>
+                            <constraint firstItem="aTO-GS-UWq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="596" id="wFn-xp-eub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YZ3-Gv-ffN" secondAttribute="trailing" constant="134" id="zsC-LK-qcL"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="YZ3-Gv-ffN" id="wc5-v7-G2a"/>

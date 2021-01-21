@@ -6,33 +6,48 @@
 //
 
 import UIKit
-import SwiftSpinner
+import NVActivityIndicatorView
 import CoreImage
 import ReactiveKit
 import Bond
-import SwiftyBeaver
+import os
 
 class ViewController: UIViewController {
     
-    let viewModel = ViewModel()
-    let disposeBag = DisposeBag()
-    let downloadDidFinish = false
-    var numberOfFaces = 0
+    let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "app")
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var label: UILabel!
+    var activityIndicator : NVActivityIndicatorView!
     
-    @IBAction func `import`(_ sender: Any) {
-        SwiftyBeaver.verbose("Save button clicked")
-        let stringUrl = Strings.pickRandomUrlString()
+    let viewModel = DownloadingHelper()
+    let disposeBag = DisposeBag()
+    var detectedFacesNumber: Int = 0
+    
+    func load() {
+        let xAxis = self.view.center.x // or use (view.frame.size.width / 2) // or use (faqWebView.frame.size.width / 2)
+        let yAxis = self.view.center.y // or use (view.frame.size.height / 2) // or use (faqWebView.frame.size.height / 2)
+        
+        
+        
+        let frame = CGRect(x: (xAxis - 50), y: (yAxis - 50), width: 45, height: 45)
+        activityIndicator = NVActivityIndicatorView(frame: frame)
+        activityIndicator.type = . ballScale // add your type
+        activityIndicator.color = UIColor.red // add your color
+        
+        self.view.addSubview(activityIndicator) // or use  webView.addSubview(activityIndicator)
+    }
+    
+    @IBAction func `downloadImage`(_ sender: Any) {
+        logger.log("IBAction buton started")
+        let stringUrl = SharedStrings.generateRandomUrlStr()
         let downloadUrl: URL = URL(string: stringUrl)!
-        SwiftSpinner.show("Downloading Image")
+        self.activityIndicator.startAnimating()
         self.button.isEnabled = false
         
         URLSession.shared.dataTask(with: downloadUrl) { (data, response, error) in
-            SwiftyBeaver.info("Started downloading image with URLSession")
-            
+            self.logger.log("start URLSession.shared.dataTask")
             guard let httpResponse = response as? HTTPURLResponse else {
                 fatalError("something went wrong here")
             }
@@ -46,44 +61,54 @@ class ViewController: UIViewController {
                 guard let image = UIImage.init(data: imageData) else {
                     fatalError("not valid image data")
                 }
-                
-                SwiftyBeaver.info("Uploading image to document directory started")
+                self.logger.log("start writing to document directory")
                 self.viewModel.writeImgInDocuments(image: image, name: "image.jpg")
-                SwiftyBeaver.info("Uploading image to document directory ended")
+                self.logger.log("end writing to document directory")
                 
                 DispatchQueue.main.async {
-                    SwiftyBeaver.verbose("Back to the main thread to set up image view started")
+                    self.logger.log("start setting up image view main thread")
                     self.imageView.image = image
                     self.button.isEnabled = true
-                    SwiftyBeaver.verbose("Back to the main thread to set up image view ended")
+                    self.logger.log("end setting up image view main thread")
                 }
                 
             default:
                 fatalError("not 200 response provided")
             }
-            self.viewModel.downloadDidFinish.value = true
-            SwiftSpinner.hide()
+            self.viewModel.downloadFinished.value = true
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+            }
         }.resume()
-        SwiftyBeaver.info("End of URLSession with resume()")
+        self.logger.log("end url session")
     }
+    
+    func detectFacesInViewController() {
+        DispatchQueue.main.async {
+            guard let image = self.imageView.image else { return }
+            guard let preparedImage = CIImage(image: image) else { return }
+            self.detectedFacesNumber = self.countFacesDetected(img: preparedImage)
+            self.label.text = "We detected " + String(self.detectedFacesNumber) + " number of faces!"
+        }
+    }
+    
     override func viewDidLoad() {
+        load()
         super.viewDidLoad()
-        _ = self.viewModel.downloadDidFinish.observeNext(with: { [unowned self] _ in
-            SwiftyBeaver.info("Performing face detection started")
-            self.performDetection()
-            SwiftyBeaver.info("Performing face detection ended")
+        _ = self.viewModel.downloadFinished.observeNext(with: { [unowned self] _ in
+            self.logger.log("start face detection")
+            self.detectFacesInViewController()
+            self.logger.log("end face detection")
         }).dispose(in: disposeBag)
     }
     
-    func performDetection() {
-        SwiftyBeaver.verbose("DispatchQueue.main.async to perform detection started")
-        DispatchQueue.main.async {
-            guard let image = self.imageView.image else { return }
-            guard let imageCi = CIImage(image: image) else { return }
-            self.numberOfFaces = self.viewModel.detectFaces(img: imageCi)
-            self.label.text = "The number of faces detected is " + String(self.numberOfFaces)
-        }
-        SwiftyBeaver.verbose("DispatchQueue.main.async to perform detection started ended")
+    
+    func countFacesDetected(img: CIImage) -> Int {
+        let accuracy = [CIDetectorAccuracy: CIDetectorAccuracyHigh]
+        let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: accuracy)
+        let faces = faceDetector?.features(in: img)
+        guard let facesCount = faces?.count else { return 0 }
+        return facesCount
     }
 }
 
