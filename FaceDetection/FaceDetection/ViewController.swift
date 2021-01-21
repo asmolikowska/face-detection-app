@@ -58,7 +58,6 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         _ = self.viewModel.downloadDidFinish.observeNext(with: { [unowned self] _ in
             self.performDetection()
         }).dispose(in: disposeBag)
@@ -69,6 +68,7 @@ class ViewController: UIViewController {
             guard let image = self.imageView.image else { return }
             guard let imageCi = CIImage(image: image) else { return }
             self.numberOfFaces = self.viewModel.detectFaces(img: imageCi)
+            self.label.text = "The number of faces detected is " + String(self.numberOfFaces)
         }
     }
 }
