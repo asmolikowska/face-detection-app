@@ -3,3 +3,4 @@ ${BUILT_PRODUCTS_DIR}/Bond/Bond.framework
 ${BUILT_PRODUCTS_DIR}/Differ/Differ.framework
 ${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework
 ${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework
+${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework

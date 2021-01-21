@@ -17,7 +17,6 @@ class ViewModel {
         let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: accuracy)
         let faces = faceDetector?.features(in: img)
         guard let facesCount = faces?.count else { return 0 }
-        print(facesCount)
         return facesCount
     }
     
@@ -31,7 +30,6 @@ class ViewModel {
         do {
             if let data = image.jpegData(compressionQuality: 1.0) {
                 try data.write(to: url)
-                print("Saved succesfully with path \(url)")
             }
         } catch {
             print(error)
