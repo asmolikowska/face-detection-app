@@ -1,0 +1,59 @@
+2021-01-22 00:54:24.584453+0100 FaceDetection[48418:1801580] [app] start face detection
+2021-01-22 00:54:24.584876+0100 FaceDetection[48418:1801580] [app] end face detection
+2021-01-22 00:54:26.753467+0100 FaceDetection[48418:1801580] [app] IBAction buton started
+2021-01-22 00:54:26.761866+0100 FaceDetection[48418:1801580] [app] end url session
+2021-01-22 00:54:27.005388+0100 FaceDetection[48418:1801902] [] nw_protocol_get_quic_image_block_invoke dlopen libquic failed
+2021-01-22 00:54:33.242124+0100 FaceDetection[48418:1801905] [app] start URLSession.shared.dataTask
+2021-01-22 00:54:33.323069+0100 FaceDetection[48418:1801905] [app] start writing to document directory
+2021-01-22 00:54:36.676109+0100 FaceDetection[48418:1801905] [app] end writing to document directory
+2021-01-22 00:54:36.676445+0100 FaceDetection[48418:1801580] [app] start setting up image view main thread
+2021-01-22 00:54:36.676678+0100 FaceDetection[48418:1801905] [app] start face detection
+2021-01-22 00:54:36.676959+0100 FaceDetection[48418:1801905] [app] end face detection
+2021-01-22 00:54:36.677184+0100 FaceDetection[48418:1801580] [app] end setting up image view main thread
+2021-01-22 00:54:40.421581+0100 FaceDetection[48418:1801580] Metal API Validation Enabled
+2021-01-22 00:54:46.400553+0100 FaceDetection[48418:1801580] [app] IBAction buton started
+2021-01-22 00:54:46.402584+0100 FaceDetection[48418:1801580] [app] end url session
+2021-01-22 00:54:53.231742+0100 FaceDetection[48418:1801907] [app] start URLSession.shared.dataTask
+2021-01-22 00:54:53.232601+0100 FaceDetection[48418:1801907] [app] start writing to document directory
+2021-01-22 00:54:57.126225+0100 FaceDetection[48418:1801907] [app] end writing to document directory
+2021-01-22 00:54:57.126559+0100 FaceDetection[48418:1801580] [app] start setting up image view main thread
+2021-01-22 00:54:57.126590+0100 FaceDetection[48418:1801907] [app] start face detection
+2021-01-22 00:54:57.126995+0100 FaceDetection[48418:1801580] [app] end setting up image view main thread
+2021-01-22 00:54:57.127170+0100 FaceDetection[48418:1801907] [app] end face detection
+2021-01-22 00:56:14.992911+0100 FaceDetection[48418:1801580] [app] IBAction buton started
+2021-01-22 00:56:14.993757+0100 FaceDetection[48418:1801580] [app] end url session
+2021-01-22 00:56:27.128313+0100 FaceDetection[48418:1802358] [app] start URLSession.shared.dataTask
+2021-01-22 00:56:27.129159+0100 FaceDetection[48418:1802358] [app] start writing to document directory
+2021-01-22 00:56:31.169182+0100 FaceDetection[48418:1802358] [app] end writing to document directory
+2021-01-22 00:56:31.169917+0100 FaceDetection[48418:1801580] [app] start setting up image view main thread
+2021-01-22 00:56:31.170112+0100 FaceDetection[48418:1802358] [app] start face detection
+2021-01-22 00:56:31.170456+0100 FaceDetection[48418:1801580] [app] end setting up image view main thread
+2021-01-22 00:56:31.170581+0100 FaceDetection[48418:1802358] [app] end face detection
+2021-01-22 00:56:46.904182+0100 FaceDetection[48418:1801580] [app] IBAction buton started
+2021-01-22 00:56:46.905224+0100 FaceDetection[48418:1801580] [app] end url session
+2021-01-22 00:56:54.389837+0100 FaceDetection[48418:1803406] [app] start URLSession.shared.dataTask
+2021-01-22 00:56:54.391548+0100 FaceDetection[48418:1803406] [app] start writing to document directory
+2021-01-22 00:56:58.183927+0100 FaceDetection[48418:1803406] [app] end writing to document directory
+2021-01-22 00:56:58.184319+0100 FaceDetection[48418:1801580] [app] start setting up image view main thread
+2021-01-22 00:56:58.184388+0100 FaceDetection[48418:1803406] [app] start face detection
+2021-01-22 00:56:58.184688+0100 FaceDetection[48418:1803406] [app] end face detection
+2021-01-22 00:56:58.184697+0100 FaceDetection[48418:1801580] [app] end setting up image view main thread
+2021-01-22 00:58:10.504548+0100 FaceDetection[48418:1801580] [app] IBAction buton started
+2021-01-22 00:58:10.505450+0100 FaceDetection[48418:1801580] [app] end url session
+2021-01-22 00:58:22.846295+0100 FaceDetection[48418:1804116] [app] start URLSession.shared.dataTask
+2021-01-22 00:58:22.848375+0100 FaceDetection[48418:1804116] [app] start writing to document directory
+2021-01-22 00:58:28.279647+0100 FaceDetection[48418:1804116] [app] end writing to document directory
+2021-01-22 00:58:28.280158+0100 FaceDetection[48418:1801580] [app] start setting up image view main thread
+2021-01-22 00:58:28.280177+0100 FaceDetection[48418:1804116] [app] start face detection
+2021-01-22 00:58:28.280556+0100 FaceDetection[48418:1804116] [app] end face detection
+2021-01-22 00:58:28.287273+0100 FaceDetection[48418:1801580] [app] end setting up image view main thread
+2021-01-22 00:58:40.579532+0100 FaceDetection[48418:1801580] [app] IBAction buton started
+2021-01-22 00:58:40.580652+0100 FaceDetection[48418:1801580] [app] end url session
+2021-01-22 00:58:44.723215+0100 FaceDetection[48418:1803625] [app] start URLSession.shared.dataTask
+2021-01-22 00:58:44.723984+0100 FaceDetection[48418:1803625] [app] start writing to document directory
+2021-01-22 00:58:47.639468+0100 FaceDetection[48418:1803625] [app] end writing to document directory
+2021-01-22 00:58:47.639773+0100 FaceDetection[48418:1801580] [app] start setting up image view main thread
+2021-01-22 00:58:47.639797+0100 FaceDetection[48418:1803625] [app] start face detection
+2021-01-22 00:58:47.639978+0100 FaceDetection[48418:1803625] [app] end face detection
+2021-01-22 00:58:47.640067+0100 FaceDetection[48418:1801580] [app] end setting up image view main thread
+

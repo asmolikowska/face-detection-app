@@ -1,9 +1,3 @@
-//
-//  Strings.swift
-//  FaceDetection
-//
-//  Created by Alicja Smolikowska on 21/01/2021.
-//
 
 import Foundation
 

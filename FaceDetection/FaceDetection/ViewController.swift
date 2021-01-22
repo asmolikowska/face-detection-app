@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  FaceDetection
-//
-//  Created by Alicja Smolikowska on 19/01/2021.
-//
+
 
 import UIKit
 import NVActivityIndicatorView
