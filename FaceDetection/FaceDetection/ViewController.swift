@@ -67,6 +67,7 @@ class ViewController: UIViewController {
         SwiftyBeaver.info("End of URLSession with resume()")
     }
     override func viewDidLoad() {
+        prepareView()
         super.viewDidLoad()
         _ = self.viewModel.downloadDidFinish.observeNext(with: { [unowned self] _ in
             SwiftyBeaver.info("Performing face detection started")
@@ -84,6 +85,12 @@ class ViewController: UIViewController {
             self.label.text = "The number of faces detected is " + String(self.numberOfFaces)
         }
         SwiftyBeaver.verbose("DispatchQueue.main.async to perform detection started ended")
+    }
+    
+    func prepareView() {
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.black.cgColor
     }
 }
 
