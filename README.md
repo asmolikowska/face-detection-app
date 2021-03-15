@@ -13,4 +13,5 @@ Application which:
 <p align="center">
   <img src="https://github.com/asmolikowska/face-detection-app/blob/main/appgif.gif" height="600" />
 </p>
+
 Application made for Advanced Mobile Systems Course in Computer Science.
